@@ -1,0 +1,10 @@
+p {
+	color: red;
+	background: lightgreen;
+	font-size: big;
+	text-align: center;
+}
+h2 {
+	text-shadow: 0 0 3px #FF0000;
+}
+
