@@ -1,5 +1,5 @@
 # HTML-and-CSS-Projects
-#### This is a collection of some sample websites i made using HTML and CSS.
+#### This is a collection of some sample websites I made using HTML and CSS.
 ## Projects:
 * [Space Station Site](https://github.com/emfig/HTML-and-CSS-Projects/tree/main/Project%20Web)
 * [Movie Theater Site](https://github.com/emfig/HTML-and-CSS-Projects/tree/main/bootstrap4_project)
