@@ -3,7 +3,7 @@
 	<head>
 		<title>Roberto's Basketball Tryouts</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="./CSS/one_page_website.css"> 
+		<link rel="stylesheet" href="./CSS/one_page_website.css">
 	</head>
 	<body>
 		
@@ -11,9 +11,9 @@
 		<div>
 			<div>
 				<ul>
-					<a href="#home"><li>HOME</li>
-					<a href="#gallery"><li>GALLERY</li>
-					<a href="#contact"><li>CONTACT US</li>
+					<a href="#home"><li>HOME</li></a>
+					<a href="#gallery"><li>GALLERY</li></a>
+					<a href="#contact"><li>CONTACT US</li></a>
 				</ul>
 			</div>
 		</div>
@@ -43,60 +43,80 @@
 					</div>
 					<!-- END VIDEO CONTAINER -->
 					
-					<!-- PHOTO CONTAINER 1 -->
-					<div>
-						<div class="photo">
-							<img src="./Images/pic_1.jpg" width="350" height="350">
-							<div class="photo-overlay">
-								<h1>Click to Enlarge</h1>
-							</div>
+					<!-- LIGHT BOX -->
+					<div class="row">
+						<div class="column">
+						  <img class="thumbnail" src="./Images/pic_1.jpg" style="width:100%;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+						  <img class="thumbnail" src="./Images/pic_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+						  <img class="thumbnail" src="./Images/pic_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+						  <img class="thumbnail" src="./Images/pic_4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+						</div>
+						<div class="column">
+							<img class="thumbnail" src="./Images/pic_5.jpg" style="width:100%;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
 						</div>
 					</div>
-					<!-- END PHOTO CONTAINER 1 -->
-					
-					<!-- PHOTO CONTAINER 2 -->
-					<div>
-						<div>
-							<img src="./Images/pic_2.jpg" width="350" height="350">
-							<div>
-								<h1>Click to Enlarge</h1>
-							</div>
+					  
+					  <div id="myModal" class="modal">
+						<span class="close cursor" onclick="closeModal()">&times;</span>
+						<div class="modal-content">
+					  
+						  <div class="mySlides">
+							<div class="numbertext">1 / 5</div>
+							<img src="./Images/pic_1_wide.jpg" style="width:100%">
+						  </div>
+					  
+						  <div class="mySlides">
+							<div class="numbertext">2 / 5</div>
+							<img src="./Images/pic_2_wide.jpg" style="width:100%">
+						  </div>
+					  
+						  <div class="mySlides">
+							<div class="numbertext">3 / 5</div>
+							<img src="./Images/pic_3_wide.jpg" style="width:100%">
+						  </div>
+						  
+						  <div class="mySlides">
+							<div class="numbertext">4 / 5</div>
+							<img src="./Images/pic_4_wide.jpg" style="width:100%">
+						  </div>
+
+						  <div class="mySlides">
+							<div class="numbertext">5 / 5</div>
+							<img src="./Images/pic_5_wide.jpg" style="width:100%;">
+						  </div>
+						  
+						  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+					  
+						  <div class="caption-container">
+							<p id="caption"></p>
+						  </div>
+					  
+					  
+						  <div class="column">
+							<img class="thumbnail_wide" class="demo cursor" src="./Images/pic_1_wide.jpg" style="width:100%" onclick="currentSlide(1)">
+						  </div>
+						  <div class="column">
+							<img class="thumbnail_wide" class="demo cursor" src="./Images/pic_2_wide.jpg" style="width:100%" onclick="currentSlide(2)">
+						  </div>
+						  <div class="column">
+							<img class="thumbnail_wide" class="demo cursor" src="./Images/pic_3_wide.jpg" style="width:100%" onclick="currentSlide(3)">
+						  </div>
+						  <div class="column">
+							<img class="thumbnail_wide" class="demo cursor" src="./Images/pic_4_wide.jpg" style="width:100%" onclick="currentSlide(4)">
+						  </div>
+						  <div class="column">
+							<img class="thumbnail_wide" class="demo cursor" src="./Images/pic_5_wide.jpg" style="width:100%;" onclick="currentSlide(5)">
+						  </div>
 						</div>
-					</div>
-					<!-- END PHOTO CONTAINER 2 -->
-					
-					<!-- PHOTO CONTIANER 3 -->
-					<div>
-						<div>
-							<img src="./Images/pic_3.jpg" width="350" height="350">
-							<div>
-								<h1>Click to Enlarge</h1>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO CONTAINER 3 -->
-					
-					<!-- PHOTO CONTAINER 4 -->
-					<div>
-						<div>
-							<img src="./Images/pic_4.jpg" width="350" height="350">
-							<div>
-								<h1>Click to Enlarge</h1>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO CONTAINER 4 -->
-					
-					<!-- PHOTO CONTAINER 5 -->
-					<div>
-						<div>
-							<img src="./Images/pic_5.jpg" width="350" height="350">
-							<div>
-								<h1>Click to Enlarge</h1>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO CONTAINER 5 -->
+					  </div>
+					  <!-- END LIGHTBOX -->
 					
 				</div>
 			</div>
@@ -106,8 +126,8 @@
 		<!-- CONTACT INFO -->
 		<section class="form">
 			<div id="contact">
-				<div class="form-header">
-					<h1>GET IN TOUCH WITH US TODAY!!!</h1>
+				<div class="header-form">
+					<h1 class="header-form">GET IN TOUCH WITH US TODAY!!!</h1>
 					<div class="contact-text">
 						<p>Please provide your basic information.</p>
 						<div class="contact-form">
@@ -134,6 +154,6 @@
 			&vert; www.bertohoops.ball &vert;
 		</div>
 		<!-- END FOOTER -->
-		
+	<script src="./JS/one_page_website.js"></script>
 	</body>
 </html>
